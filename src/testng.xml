@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test suite 1"  parallel="classes" verbose="1" >
+<test name="ICTRT suite" >
+<classes>
+<class name="ICTRT_Automation.Report_Subscriber_Trouble"/>
+<class name="ICTRT_Automation.Request_Network_Testing"/>
+<class name="ICTRT_Automation.Ticket_Search"/>
+<class name="ICTRT_Automation.User_Administration"/>
+</classes>
+</test>
+</suite>
