@@ -66,7 +66,7 @@ public class Ticket_Search {
 	 browser.switchTo().frame(0);
 	 WebElement Ticket_sch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/a[2]/font[1]")));
 	 Ticket_sch.click();	
-	 new Select(browser.findElement(By.name("status"))).selectByVisibleText("New");
+	 new Select(browser.findElement(By.name("status"))).selectByVisibleText("Open");
 	 WebElement Btn_go = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
 	 Btn_go.click();
   }

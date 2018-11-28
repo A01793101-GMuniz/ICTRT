@@ -63,17 +63,40 @@ public class Report_Subscriber_Trouble {
   }
   
   @Test(priority=1)
-  	public void ReportSubscriber() {
+  	public void ReportSubscriber() throws InterruptedException {
 	  	browser.switchTo().frame(0);
-		WebElement Report_SubscriberTrouble = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/a[2]/font[1]")));
+		WebElement Report_SubscriberTrouble = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/a[1]/img[1]")));
 		Report_SubscriberTrouble.click();
-		
+		//First ticket screen
 		browser.findElement(By.xpath("//input[@name='Camel' and @value='Yes']")).click();
 		new Select(browser.findElement(By.name("Location"))).selectByVisibleText("Alabama");
-		//browser.findElement(By.xpath("//input[@name='Generation' and @value='3G']")).click();
-		//browser.findElement(By.xpath("//input[@name='IssueID' and @value='3']")).click();
+		browser.findElement(By.xpath("//input[@name='Generation' and @value='3G']")).click();
+		Thread.sleep(5000);
+		browser.findElement(By.xpath("//input[@name='IssueID' and @value='3']")).click();
 		WebElement Btn_Next = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[6]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
 		Btn_Next.click();
+		
+		//Second ticket screen
+		new Select(browser.findElement(By.xpath("\n" + "/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/select[1]"))).selectByVisibleText("Yes");
+		WebElement TF_ScreenModNTWK = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/input[1]")));
+		TF_ScreenModNTWK.sendKeys ("test");
+		WebElement TF_FaultMessage = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[2]/span[1]/textarea[1]")));
+		TF_FaultMessage.sendKeys ("test");
+		WebElement TF_Description = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[4]/td[2]/span[1]/textarea[1]")));
+		TF_Description.sendKeys ("test");
+		WebElement Btn_Next2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[3]/tbody[1]/tr[1]/td[1]/a[1]")));
+		Btn_Next2.click();
+		//Third screen ticket
+		WebElement TF_MSISDN = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/input[1]")));
+		TF_MSISDN.sendKeys ("999999999999999");
+		WebElement TF_IMSI = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[4]/input[1]")));
+		TF_IMSI.sendKeys ("999999999999999");
+		WebElement TF_VLR = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[4]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/input[1]")));
+		TF_VLR.sendKeys ("999999999999999");
+		new Select(browser.findElement(By.xpath("\n" + "/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[5]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/select[1]"))).selectByVisibleText("No");
+		WebElement Btn_SubmitTicket = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[7]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[4]/tbody[1]/tr[1]/td[1]/a[1]")));
+		Btn_SubmitTicket.click();
+		
   	}
 
   @AfterTest

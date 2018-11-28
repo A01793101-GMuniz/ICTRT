@@ -63,17 +63,32 @@ public class Request_Network_Testing {
   }
   
   @Test (priority=1)
-  public void RequestNetwork() {
+  public void RequestNetwork() throws InterruptedException {
 	  	browser.switchTo().frame(0); //browser.findElement(By.name("home"))
-		WebElement Req_nt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/a[2]")));
+		WebElement Req_nt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]/img[1]")));
 		Req_nt.click();
+		//First ticket screen
 		browser.findElement(By.xpath("//input[@name='Camel' and @value='Yes']")).click();
 	    browser.findElement(By.name("Location")).click();
 	    new Select(browser.findElement(By.name("Location"))).selectByVisibleText("Alabama");
 	    browser.findElement(By.name("Location")).click();
-	    browser.findElement(By.xpath("//input[@name='Generation' and @value='7GG TEST']")).click();
-	    WebElement NT_next = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[6]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
-	    NT_next.click();
+	    browser.findElement(By.xpath("//input[@name='Generation' and @value='4G.']")).click();
+	    Thread.sleep(5000);
+	    browser.findElement(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]")).click();
+	    WebElement Btn_next = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[6]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
+	    Btn_next.click();
+	    //Second ticket screen
+	    WebElement TF_Description = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/span[1]/textarea[1]")));
+		TF_Description.sendKeys ("test");
+		WebElement Btn_Next2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[3]/tbody[1]/tr[1]/td[1]/a[1]")));
+		Btn_Next2.click();
+		//Third screen ticket
+		WebElement TF_MSISDN = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[4]/input[1]")));
+		TF_MSISDN.sendKeys ("999999999999999");
+		WebElement TF_IMSI = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[6]/input[1]")));
+		TF_IMSI.sendKeys ("999999999999999");
+		WebElement Btn_SubmitTicket = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[6]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[4]/tbody[1]/tr[1]/td[1]/a[1]")));
+		Btn_SubmitTicket.click();
   }
   
   @AfterTest

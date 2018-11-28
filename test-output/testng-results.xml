@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34024" started-at="2018-11-14T20:10:25Z" finished-at="2018-11-14T20:11:00Z">
+  <suite name="Default suite" duration-ms="75211" started-at="2018-11-28T02:15:02Z" finished-at="2018-11-28T02:16:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34024" started-at="2018-11-14T20:10:25Z" finished-at="2018-11-14T20:11:00Z">
-      <class name="ICTRT_Automation.User_Administration">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:ICTRT_Automation.User_Administration@5c7fa833]" name="beforeTest" is-config="true" duration-ms="3190" started-at="2018-11-14T20:10:25Z" finished-at="2018-11-14T20:10:29Z">
+    <test name="Default test" duration-ms="75211" started-at="2018-11-28T02:15:02Z" finished-at="2018-11-28T02:16:18Z">
+      <class name="ICTRT_Automation.Request_Network_Testing">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:ICTRT_Automation.Request_Network_Testing@5c7fa833]" name="beforeTest" is-config="true" duration-ms="5963" started-at="2018-11-28T02:15:02Z" finished-at="2018-11-28T02:15:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:ICTRT_Automation.User_Administration@5c7fa833]" name="Login" duration-ms="9047" started-at="2018-11-14T20:10:29Z" finished-at="2018-11-14T20:10:38Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:ICTRT_Automation.Request_Network_Testing@5c7fa833]" name="Login" duration-ms="14388" started-at="2018-11-28T02:15:08Z" finished-at="2018-11-28T02:15:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="UserAdministration_CreateUser()[pri:1, instance:ICTRT_Automation.User_Administration@5c7fa833]" name="UserAdministration_CreateUser" duration-ms="12393" started-at="2018-11-14T20:10:38Z" finished-at="2018-11-14T20:10:50Z">
+        <test-method status="PASS" signature="RequestNetwork()[pri:1, instance:ICTRT_Automation.Request_Network_Testing@5c7fa833]" name="RequestNetwork" duration-ms="44676" started-at="2018-11-28T02:15:23Z" finished-at="2018-11-28T02:16:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserAdministration_CreateUser -->
-        <test-method status="PASS" signature="UserAdministration_SearchUser()[pri:2, instance:ICTRT_Automation.User_Administration@5c7fa833]" name="UserAdministration_SearchUser" duration-ms="4120" started-at="2018-11-14T20:10:50Z" finished-at="2018-11-14T20:10:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UserAdministration_SearchUser -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:ICTRT_Automation.User_Administration@5c7fa833]" name="afterTest" is-config="true" duration-ms="5250" started-at="2018-11-14T20:10:54Z" finished-at="2018-11-14T20:11:00Z">
+        </test-method> <!-- RequestNetwork -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:ICTRT_Automation.Request_Network_Testing@5c7fa833]" name="afterTest" is-config="true" duration-ms="10128" started-at="2018-11-28T02:16:07Z" finished-at="2018-11-28T02:16:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- ICTRT_Automation.User_Administration -->
+      </class> <!-- ICTRT_Automation.Request_Network_Testing -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
