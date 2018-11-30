@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Test suite 1"  parallel="classes" verbose="1" >
+<suite name="Test suite 1"  parallel="classes" verbose="2" >
 <test name="ICTRT suite" >
 <classes>
 <class name="ICTRT_Automation.Report_Subscriber_Trouble"/>
