@@ -45,7 +45,7 @@ public class Ticket_Search {
 	public void Login() throws InterruptedException {
 		browser.get("http://zlt12824.vci.att.com:8500/ictrt/");
 		browser.manage().window().maximize();
-		String user = usr; //"KB0004"; JM0007
+		String user = usr; //"KB0004"; "JM0007";
 		browser.switchTo().frame(0);
 		wait = new WebDriverWait (browser,20);
 		WebElement TF_User = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='lrrFormId']//input[@name='userid']")));
