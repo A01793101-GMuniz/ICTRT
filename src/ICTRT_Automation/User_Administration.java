@@ -64,56 +64,133 @@ public class User_Administration {
   @Test (priority=1)
   public void UserAdministration_CreateUser() {
 	  	browser.switchTo().frame(0);
-		WebElement User_admin = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[4]/a[2]/font[1]")));
-	    User_admin.click();
-	    WebElement Create_User = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/a[1]")));
-		Create_User.click(); 
-		new Select(browser.findElement(By.name("group"))).selectByVisibleText("Carrier User");
-		WebElement TF_FName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]//input[@name='firstName']")));
-		TF_FName.sendKeys("Test");
-		WebElement TF_MName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[4]/input[@name='middleName']")));
-		TF_MName.sendKeys("Test");
-		WebElement TF_LName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[6]/input[@name='lastName']")));
-		TF_LName.sendKeys("Test");
-		WebElement TF_Phone = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/input[@name='phone']")));
-		TF_Phone.sendKeys("3331578987");
-		WebElement TF_Ext = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[4]/input[@name='ext']")));
-		TF_Ext.sendKeys("231");
-		WebElement TF_Email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[6]/input[@name='email']")));
-		TF_Email.sendKeys("test@gmail.com");
-		WebElement Btn_CreateUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
-		Btn_CreateUser.click();
+	  	
+	  	 if(usr.equals("TR0001") ) {
+	  		WebElement User_admin = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/a[2]/font[1]")));
+		    User_admin.click();
+		    WebElement Create_User = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/a[1]")));
+			Create_User.click();
+			//First Screen
+			new Select(browser.findElement(By.name("group"))).selectByVisibleText("Carrier Super User"); 
+			WebElement Btn_Next = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
+			Btn_Next.click();
+			//Second Screen
+			new Select(browser.findElement(By.name("group"))).selectByVisibleText("Carrier User");
+			new Select(browser.findElement(By.name("companyID"))).selectByValue("10007");
+			WebElement TF_FName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]//input[@name='firstName']")));
+			TF_FName.sendKeys("Test");
+			WebElement TF_MName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[4]/input[@name='middleName']")));
+			TF_MName.sendKeys("Test");
+			WebElement TF_LName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[6]/input[@name='lastName']")));
+			TF_LName.sendKeys("Test");
+			WebElement TF_Phone = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/input[@name='phone']")));
+			TF_Phone.sendKeys("3331578987");
+			WebElement TF_Ext = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[4]/input[@name='ext']")));
+			TF_Ext.sendKeys("231");
+			WebElement TF_Email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[6]/input[@name='email']")));
+			TF_Email.sendKeys("test@gmail.com");
+			
+			WebElement Btn_CreateUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
+			Btn_CreateUser.click();
+			
+		  	 }
+	  	 else if(usr.equals("KB0004") || usr.equals(" jm0007")) {
+		  		WebElement User_admin = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[4]/a[2]/font[1]")));
+			    User_admin.click();
+			    //First screen
+			    WebElement Create_User = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/a[1]")));
+				Create_User.click();
+				//Second screen
+				new Select(browser.findElement(By.name("group"))).selectByVisibleText("Carrier User");
+				WebElement TF_FName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]//input[@name='firstName']")));
+				TF_FName.sendKeys("Test");
+				WebElement TF_MName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[4]/input[@name='middleName']")));
+				TF_MName.sendKeys("Test");
+				WebElement TF_LName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[6]/input[@name='lastName']")));
+				TF_LName.sendKeys("Test");
+				WebElement TF_Phone = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/input[@name='phone']")));
+				TF_Phone.sendKeys("3331578987");
+				WebElement TF_Ext = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[4]/input[@name='ext']")));
+				TF_Ext.sendKeys("231");
+				WebElement TF_Email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[6]/input[@name='email']")));
+				TF_Email.sendKeys("test@gmail.com");
+				
+				WebElement Btn_CreateUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[3]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
+				Btn_CreateUser.click();
+				
+				
+		  	 }
+	  	 else {
+					System.out.println("Invalid User, check administration create user flow \n");
+	  	 }
+	  
+        
+	     
+		
+		 
+		
 		//Ya que se crea usuario para probar que si se creo 
 		//String ExpectedTittle = "has been created."
 		//String Title driver.getTitle();
 		//Assert.assertEquals(title, expectedTitle);
+		
   }
   	
   @Test (priority=2)
   public void UserAdministration_SearchUser() {
 	  //browser.switchTo().frame(0);
-	  WebElement btn_UsAdm = wait.until (ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[5]/table[1]/tbody[1]/tr[2]/td[3]/a[1]")));
-	  btn_UsAdm.click();
-	  WebElement TF_FName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/input[@name='firstName']")));
-	  TF_FName.sendKeys("Test");
-	  new Select(browser.findElement(By.name("group"))).selectByVisibleText("Carrier User");
-	  WebElement Btn_Go = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[3]/tbody[1]/tr[1]/td[1]/a[1]")));
-	  Btn_Go.click();
-	  //assertEquals("Nicole", driver.findElement(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[4]")).getText());
-	  String actualString = browser.findElement(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[4]")).getText();
-	  boolean si = actualString.contains("Test");
-	  if(si == true) {
-		  System.out.println("Found created user");
-	  	}
+	  //WebElement btn_UsAdm = wait.until (ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[5]/table[1]/tbody[1]/tr[2]/td[3]/a[1]")));
+	  //btn_UsAdm.click();
+	  if(usr.equals("TR0001") ) {
+		    WebElement User_admin = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[2]/td[3]/a[1]")));
+		    User_admin.click();
+		    WebElement TF_FName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[2]/input[1]")));
+			  TF_FName.sendKeys("Test");
+			  new Select(browser.findElement(By.name("group"))).selectByVisibleText("Carrier User");
+			  WebElement Btn_Go = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[3]/tbody[1]/tr[1]/td[1]/a[1]")));
+			  Btn_Go.click();
+			  //assertEquals("Nicole", driver.findElement(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[4]")).getText());
+			  String actualString = browser.findElement(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[4]")).getText();
+			  boolean si = actualString.contains("Test");
+			  if(si == true) {
+				  System.out.println("Found created user");
+			  	}
+			  else {
+				  System.out.println("Didn´t found created user");
+			  	}
+			  }
+		    
+	  else if(usr.equals("KB0004") || usr.equals(" jm0007")) {
+		  
+		  		WebElement User_admin = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[5]/table[1]/tbody[1]/tr[2]/td[3]/a[1]")));
+			    User_admin.click();
+			    WebElement TF_FName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/input[@name='firstName']")));
+				TF_FName.sendKeys("Test");
+				new Select(browser.findElement(By.name("group"))).selectByVisibleText("Carrier User");
+				WebElement Btn_Go = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[3]/tbody[1]/tr[1]/td[1]/a[1]")));
+				Btn_Go.click();
+				//assertEquals("Nicole", driver.findElement(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[4]")).getText());
+				String actualString = browser.findElement(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[4]")).getText();
+				boolean si = actualString.contains("Test");
+				  if(si == true) {
+					  System.out.println("Found created user");
+				  	}
+				  else {
+					  System.out.println("Didn´t found created user");
+				  	}
+				  
+		  	 }
 	  else {
-		  System.out.println("Didn´t found created user");
-	  	}
-	  }
+					System.out.println("Invalid User, check administration create user flow \n");
+	          }
+	  
+  }
   
   
   @AfterTest
 	public void afterTest() throws InterruptedException {
 	  Thread.sleep(5000);
 	  browser.close();
-	}
+  }
+	
 }

@@ -1,4 +1,5 @@
 package ICTRT_Automation;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -11,11 +12,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Ticket_Search {
+public class Ticket_Queue {
 	public static String usr,pwd,brw;
 	WebDriver browser;
 	WebDriverWait wait;
@@ -62,29 +64,21 @@ public class Ticket_Search {
   }
   
   @Test (priority=1)
-  public void TicketSearch() {
+  public void TicketQueue() {
+	
 	 browser.switchTo().frame(0);
-		
+	 WebElement Ticket_queue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/a[1]/img[1]")));
+	 Ticket_queue.click();
+	
+	 WebElement Btn_details = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[5]/a[1]")));
 	
 	 
-	 if(usr.equals("TR0001") || usr.equals("ah0002")) {
-		 WebElement Ticket_sch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/a[1]/img[1]")));
-		 Ticket_sch.click();
-		 new Select(browser.findElement(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/select[1]"))).selectByValue("10007");
-		 new Select(browser.findElement(By.name("status"))).selectByVisibleText("Open");
-		 WebElement Btn_go = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
-		 Btn_go.click();
-		 System.out.println("Roc users running");
-		 
-	 } else {
-		 WebElement Ticket_sch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/a[2]/font[1]")));
-		 Ticket_sch.click();
-		 new Select(browser.findElement(By.name("status"))).selectByVisibleText("Open");
-		 WebElement Btn_go = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[2]/tbody[1]/tr[1]/td[1]/a[1]")));
-		 Btn_go.click();
-		 System.out.println("Carrier users running");
+	 if( Btn_details.isDisplayed()) {		 
+		 //System.out.println("Si entre");
+		 Btn_details.click();	 
 	 }
-
+	 else  System.out.println("No tickets on queue, Please check.");
+	
   }
   
   @AfterTest
@@ -92,4 +86,5 @@ public class Ticket_Search {
 	  Thread.sleep(10000);
 	  browser.close();
 	}
+
 }

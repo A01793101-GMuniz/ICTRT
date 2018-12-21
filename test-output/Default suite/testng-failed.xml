@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ICTRT_Automation.Request_Network_Testing">
+      <class name="ICTRT_Automation.Ticket_Queue">
         <methods>
-          <include name="RequestNetwork"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="TicketQueue"/>
         </methods>
-      </class> <!-- ICTRT_Automation.Request_Network_Testing -->
+      </class> <!-- ICTRT_Automation.Ticket_Queue -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
