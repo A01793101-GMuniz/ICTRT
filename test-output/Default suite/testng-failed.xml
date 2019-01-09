@@ -5,9 +5,11 @@
     <classes>
       <class name="com.wsa.tests.LoginCSPTest">
         <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="f"/>
+          <include name="afterSuite"/>
+          <include name="validation"/>
+          <include name="BeforeSuite"/>
+          <include name="automationTeardown"/>
+          <include name="automationSetup"/>
         </methods>
       </class> <!-- com.wsa.tests.LoginCSPTest -->
     </classes>
