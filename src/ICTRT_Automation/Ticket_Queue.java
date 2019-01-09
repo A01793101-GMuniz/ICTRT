@@ -2,6 +2,7 @@ package ICTRT_Automation;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import org.openqa.selenium.By;
@@ -70,20 +71,20 @@ public class Ticket_Queue {
 	 WebElement Ticket_queue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/center[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/a[1]/img[1]")));
 	 Ticket_queue.click();
 	
-	 WebElement Btn_details = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[5]/a[1]")));
-	
 	 
-	 if( Btn_details.isDisplayed()) {		 
-		 //System.out.println("Si entre");
-		 Btn_details.click();	 
-	 }
-	 else  System.out.println("No tickets on queue, Please check.");
-	
+	 try {
+		 WebElement Btn_details = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[5]/a[1]")));
+		 Btn_details.click();
+		 System.out.println("Tickets on queue are being displayed on browser");
+	 } 
+	 catch (Exception e) {
+		 System.out.println("There are no tickets on queue. Please check.");
+		 }
   }
   
   @AfterTest
 	public void afterTest() throws InterruptedException {
-	  Thread.sleep(10000);
+	  Thread.sleep(20000);
 	  browser.close();
 	}
 
