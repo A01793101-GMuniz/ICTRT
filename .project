@@ -20,10 +20,5 @@
 			<type>1</type>
 			<location>C:/Users/sh6212/git/ictrt/ICTRT/Reports/TestSuiteReport.html</location>
 		</link>
-		<link>
-			<name>TestData/Calendar.xlsx</name>
-			<type>1</type>
-			<location>C:/Users/sh6212/git/ictrt/ICTRT/TestData/Calendar.xlsx</location>
-		</link>
 	</linkedResources>
 </projectDescription>

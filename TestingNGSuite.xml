@@ -12,7 +12,15 @@
 			<parameter name="Action" value="LoginCSPTest"></parameter>
 		</classes>
 	</test>
-	<test name="ReportSubscriberTroubleTest_MOCall" enabled="true">
+		<test name="RequestNetworkTesting" enabled="true">
+		<classes>
+			<class name="com.wsa.tests.RequestNetworkTestingTest"></class>
+			<parameter name="BrowserToOpen" value="chrome"></parameter>
+			<parameter name="AppUrl" value="http://zlt12824.vci.att.com:8500/ictrt/"></parameter>
+			<parameter name="Action" value="RequestNetworkTesting"></parameter>
+		</classes> 	
+	</test>
+	<test name="ReportSubscriberTroubleTest_MOCall" enabled="false">
 		<classes>
 			<class name="com.wsa.tests.ReportSubscriberTroubleTest"></class>
 			<parameter name="BrowserToOpen" value="chrome"></parameter>
@@ -20,7 +28,7 @@
 			<parameter name="Action" value="ReportSubscriberTroubleTest_MOCall"></parameter>
 		</classes>
 	</test>
-	<test name="ReportSubscriberTroubleTest_MTCall" enabled="true">
+	<test name="ReportSubscriberTroubleTest_MTCall" enabled="false">
 		<classes>
 			<class name="com.wsa.tests.ReportSubscriberTroubleTest"></class>
 			<parameter name="BrowserToOpen" value="chrome"></parameter>

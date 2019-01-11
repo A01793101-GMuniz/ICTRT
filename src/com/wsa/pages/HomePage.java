@@ -15,7 +15,7 @@ import com.wsa.framework.HashMapNew;
 
 public class HomePage {
 	private By button_subscriberTrouble = By.xpath("//a[@href='/ictrt/TicketCreate?TICKET_TYPE_ID=2']");
-	private By button_networkTesting = By.linkText("Request Network Testing");
+	private By button_networkTesting = By.xpath("//a[@href='/ictrt/TicketCreate?TICKET_TYPE_ID=3']");
 	private By button_ticketSearch = By.linkText("Ticket Search");
 	private By button_userAdminstration = By.linkText("User Administration");
 	
