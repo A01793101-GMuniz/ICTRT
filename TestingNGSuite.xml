@@ -20,7 +20,7 @@
 			<parameter name="Action" value="ReportSubscriberTroubleTest_MOCall"></parameter>
 		</classes>
 	</test>
-	<test name="ReportSubscriberTroubleTest_MTCall" enabled="true">
+	<test name="ReportSubscriberTroubleTest_MTCall" enabled="false">
 		<classes>
 			<class name="com.wsa.tests.ReportSubscriberTroubleTest"></class>
 			<parameter name="BrowserToOpen" value="chrome"></parameter>

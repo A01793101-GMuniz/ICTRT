@@ -37,9 +37,9 @@ public class HomePage {
 		WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(button_subscriberTrouble));
 		
 		if(e.isDisplayed()){
-			oExtentTest.log(LogStatus.INFO, "Report Subscriber Trouble link is visible");
+			oExtentTest.log(LogStatus.INFO, "HomePage|fGoToSubscriberTrouble()|Report Subscriber Trouble link is visible");
 		}else{
-			oExtentTest.log(LogStatus.FAIL, "Could not find Report Subscriber Trouble link");
+			oExtentTest.log(LogStatus.FAIL, "HomePage|fGoToSubscriberTrouble()|Could not find Report Subscriber Trouble link");
 			return false;
 		}
 		
@@ -56,9 +56,9 @@ public class HomePage {
 		WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(button_networkTesting));
 		
 		if(e.isDisplayed()){
-			oExtentTest.log(LogStatus.INFO, "Request Network Testing link is visible");
+			oExtentTest.log(LogStatus.INFO, "HomePage|fGoToNetworkTesting()|Request Network Testing link is visible");
 		}else{
-			oExtentTest.log(LogStatus.FAIL, "Could not find Request Network Testing link");
+			oExtentTest.log(LogStatus.FAIL, "HomePage|fGoToNetworkTesting()|Could not find Request Network Testing link");
 			return false;
 		}
 		
@@ -75,9 +75,9 @@ public class HomePage {
 		WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(button_ticketSearch));
 		
 		if(e.isDisplayed()){
-			oExtentTest.log(LogStatus.INFO, "Ticket Search link is visible");
+			oExtentTest.log(LogStatus.INFO, "HomePage|fGoToTicketSearch()|Ticket Search link is visible");
 		}else{
-			oExtentTest.log(LogStatus.FAIL, "Could not find Ticket Search link");
+			oExtentTest.log(LogStatus.FAIL, "HomePage|fGoToTicketSearch()|Could not find Ticket Search link");
 			return false;
 		}
 		
@@ -94,9 +94,9 @@ public class HomePage {
 		WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(button_userAdminstration));
 		
 		if(e.isDisplayed()){
-			oExtentTest.log(LogStatus.INFO, "User Adminstration link is visible");
+			oExtentTest.log(LogStatus.INFO, "HomePage|fGoToUserAdminstration()|User Adminstration link is visible");
 		}else{
-			oExtentTest.log(LogStatus.FAIL, "Could not find User Adminstration link");
+			oExtentTest.log(LogStatus.FAIL, "HomePage|fGoToUserAdminstration()|Could not find User Adminstration link");
 			return false;
 		}
 		

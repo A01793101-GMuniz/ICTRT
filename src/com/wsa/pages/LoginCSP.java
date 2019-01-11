@@ -42,16 +42,16 @@ public class LoginCSP {
 		
 		WebDriverWait wait=new WebDriverWait(oDriver, 20);
 		WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(editBox_userid));
-		oExtentTest.log(LogStatus.INFO, "Starting Login Activity");
+		oExtentTest.log(LogStatus.INFO, "LoginCSP|fLogin()|Starting Login Activity");
 		//Login with email is displayed
 		if(e.isDisplayed() && e.isEnabled()){
-			oExtentTest.log(LogStatus.INFO, "Entering Credentials");
+			oExtentTest.log(LogStatus.INFO, "LoginCSP|fLogin()|Entering Credentials");
 			CommonLib.sendKeys(oDriver, editBox_userid, dictionary.get("USERID"));
 			CommonLib.sendKeys(oDriver, editBox_password, dictionary.get("PASSWORD"));
 			oDriver.findElement(button_submit).click();
 			Thread.sleep(5000);
 		}else{
-			oExtentTest.log(LogStatus.FAIL, "Login screen not working properly!");
+			oExtentTest.log(LogStatus.FAIL, "LoginCSP|fLogin()|Login screen not working properly!");
 			return false;
 		}
 
@@ -59,11 +59,11 @@ public class LoginCSP {
 		oDriver.switchTo().frame(0);
 		WebElement b = wait.until(ExpectedConditions.visibilityOfElementLocated(button_success));
 		if(b.isDisplayed() && b.isEnabled()){
-			oExtentTest.log(LogStatus.INFO, "Clicking Success button");
+			oExtentTest.log(LogStatus.INFO, "LoginCSP|fLogin()|Clicking Success button");
 			oDriver.findElement(button_success).click();
 			Thread.sleep(5000);
 		}else{
-			oExtentTest.log(LogStatus.FAIL, "Login screen not working properly!");
+			oExtentTest.log(LogStatus.FAIL, "LoginCSP|fLogin()|Login screen not working properly!");
 			return false;
 		}
 		

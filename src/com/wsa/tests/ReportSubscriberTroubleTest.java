@@ -2,6 +2,7 @@ package com.wsa.tests;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
@@ -20,13 +21,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ReportSubscriberTroubleTest extends MyTestNGBaseClass{
+	@Parameters({"Action"})
 	@Test	
-	public void validation() throws Throwable
+	public void validation(String sAction) throws Throwable
 	{
-		//getData();
-		oExtentTest = oExtentReport.startTest("Login CSP Test");
+		oExtentTest = oExtentReport.startTest(sAction);
 		
-		//Validate home page
+		//Validate the login page
 		LoginCSP obj= new LoginCSP(oDriver,oExtentReport,oExtentTest,dataMap);
 
 		//Login
