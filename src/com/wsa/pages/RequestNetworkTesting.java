@@ -16,7 +16,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.wsa.framework.CommonLib;
 import com.wsa.framework.HashMapNew;
 
-public class ReportSubscriberTrouble {
+public class RequestNetworkTesting {
 
 	private By generation = By.xpath("//*[contains(@name, 'Generation')]");
 	
@@ -25,7 +25,7 @@ public class ReportSubscriberTrouble {
 	public ExtentTest oExtentTest;
 	public HashMapNew dictionary;
 	
-	public ReportSubscriberTrouble(WebDriver oDriver, ExtentReports oExtentReports, ExtentTest oExtentTest, HashMapNew dictionary) {
+	public RequestNetworkTesting(WebDriver oDriver, ExtentReports oExtentReports, ExtentTest oExtentTest, HashMapNew dictionary) {
 		this.oDriver = oDriver;
 		this.oExtentReports = oExtentReports;
 		this.oExtentTest = oExtentTest;
@@ -64,9 +64,9 @@ public class ReportSubscriberTrouble {
 				}
 			}			
 		    
-			oExtentTest.log(LogStatus.PASS, "ReportSubscriberTroubleTest|fCreateTicket1()|Geneartion Radio buttons are displaying !!");
+			oExtentTest.log(LogStatus.PASS, "Request Network: Geneartion Radio buttons are displaying !!");
 		}else{
-			oExtentTest.log(LogStatus.FAIL, "ReportSubscriberTroubleTest|fCreateTicket1()|Subscriber Trouble: Geneartion Radio buttons are not displaying!!");
+			oExtentTest.log(LogStatus.FAIL, "Request Network: Geneartion Radio buttons are not displaying!!");
 			return false;
 		}
 		
@@ -79,9 +79,6 @@ public class ReportSubscriberTrouble {
 			String value = chk_issueID.getAttribute("value");
 			WebElement span_issue = chk_issueID.findElement(By.xpath("//input[@name='IssueID' and @type='checkbox' and @value='" + value +
 					          "']//following-sibling::span"));
-			
-			//System.out.println("values from check boxes = " + value);
-			//System.out.println("Issue = " + span_issue.getText());
 			
 			if(strIssueType.equals(span_issue.getText())){
 				chk_issueID.click();
@@ -113,7 +110,6 @@ public class ReportSubscriberTrouble {
 				
 				String strFaultMsg = dictionary.get(strKeyFaultMsg);
 				
-				//WebElement select_allAttempts = table.findElement(By.xpath("//tr/td/select"));
 				new Select(table.findElement(By.xpath("//tr/td/select"))).selectByVisibleText(strAllAttempts); 
 				WebElement textarea_faultMsg = table.findElement(By.xpath("//tr/td/a[contains(@href, '" + strKeyFaultMsg + "')]"
 											+ "/parent::td//following-sibling::td/span/textarea"));
@@ -142,7 +138,7 @@ public class ReportSubscriberTrouble {
 			button_next.click();
 			
 		}catch (Exception e) {
-			System.out.println("Exception: Subscriber Trouble Ticket Screen 2, " + e);
+			System.out.println("Exception: Request Network Ticket Screen 2, " + e);
 			return false;
 		}
 
@@ -156,36 +152,25 @@ public class ReportSubscriberTrouble {
 		try {
 			String strKeyMSISDN = "MSISDN";
 			String strKeyIMSI = "IMSI";
-			String strKeyVLR = "VLR";
-			String strKeyContactSubscriber = "Contact Subscriber";
+			String strKeyICCID = "ICCID";
 			String strMSISDN = dictionary.get(strKeyMSISDN);
 			String strIMSI = dictionary.get(strKeyIMSI);
-			String strVLR = dictionary.get(strKeyVLR);
-			String strContactSubscriber = dictionary.get(strKeyContactSubscriber);
+			String strICCID = dictionary.get(strKeyICCID);
+			
 			
 			WebElement table = oDriver.findElement(By.xpath("//table[@class='formlayout']"));
 			WebElement txt_MSISDN = table.findElement(By.xpath("//tr/td/a[contains(@href, '" + strKeyMSISDN + "')]"
 								     + "/parent::td//following-sibling::td/input[@type='text' and @maxlength='20']"));
 			WebElement txt_IMSI = table.findElement(By.xpath("//tr/td/a[contains(@href, '" + strKeyIMSI + "')]"
 				     				 + "/parent::td//following-sibling::td/input[@type='text']"));
-			WebElement txt_VLR = table.findElement(By.xpath("//tr/td/a[contains(@href, '" + strKeyVLR + "')]"
+			WebElement txt_ICCID = table.findElement(By.xpath("//tr/td/a[contains(@href, '" + strKeyICCID + "')]"
     				 				 + "/parent::td//following-sibling::td/input[@type='text']"));
 			
-			/*
-			if (strIssueType.equalsIgnoreCase("MO Call")){
-				String strKeyBNumber = "B-Number";
-				String strBNumber = dictionary.get(strKeyBNumber);
-				WebElement txt_bNumber = table.findElement(By.xpath("//tr/td/a[contains(@href, '" + strKeyBNumber + "')]"
-										+ "/parent::td//following-sibling::td/input[@type='text']"));
-				txt_bNumber.sendKeys(strBNumber);
-			}*/
-			
+		
 			txt_MSISDN.sendKeys(strMSISDN);
 			txt_IMSI.sendKeys(strIMSI);
-			txt_VLR.sendKeys(strVLR);
+			txt_ICCID.sendKeys(strICCID);
 			
-			new Select(table.findElement(By.xpath("//tr/td/a[contains(@href, '" + strKeyContactSubscriber + "')]"
-									 + "/parent::td//following-sibling::td/select"))).selectByVisibleText(strContactSubscriber);
 			
 			WebElement button_submit = oDriver.findElement(By.linkText("Submit Ticket"));
 			wait.until(ExpectedConditions.elementToBeClickable(button_submit));
@@ -194,7 +179,7 @@ public class ReportSubscriberTrouble {
 			Thread.sleep(5000);
 			
 		} catch (Exception e) {
-			System.out.println("Exception: Subscriber Trouble Ticket Screen 3,  " + e);
+			System.out.println("Exception: Request Network Ticket Screen 3,  " + e);
 			return false;
 		}
 				

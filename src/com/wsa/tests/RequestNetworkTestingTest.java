@@ -1,15 +1,19 @@
 package com.wsa.tests;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
 import com.wsa.pages.LoginCSP;
 import com.wsa.pages.HomePage;
 import com.wsa.pages.ReportSubscriberTrouble;
+import com.wsa.pages.RequestNetworkTesting;
 import com.wsa.framework.MyTestNGBaseClass;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.wsa.framework.AutomationConstants;
 import com.wsa.framework.DataDriver;
 import com.wsa.framework.HashMapNew;
@@ -20,27 +24,28 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ReportSubscriberTroubleTest extends MyTestNGBaseClass{
-	@Parameters({"Action"})
-	@Test	
-	public void validation(String sAction) throws Throwable
+public class RequestNetworkTestingTest extends MyTestNGBaseClass{
+	@Test		
+	public void validation() throws Throwable
 	{
-		oExtentTest = oExtentReport.startTest(sAction);
+		//getData();
+		oExtentTest = oExtentReport.startTest("Login CSP Test");
 		
-		//Validate the login page
+		//Validate home page
 		LoginCSP obj= new LoginCSP(oDriver,oExtentReport,oExtentTest,dataMap);
 
 		//Login
-		Assert.assertTrue(obj.fLogin());
+		AssertJUnit.assertTrue(obj.fLogin());
 		
 		HomePage obj1 = new HomePage(oDriver,oExtentReport,oExtentTest,dataMap);
 		
-		Assert.assertTrue(obj1.fGoToSubscriberTrouble());
+		AssertJUnit.assertTrue(obj1.fGoToNetworkTesting());
 		
-		ReportSubscriberTrouble obj2 = new ReportSubscriberTrouble(oDriver,oExtentReport,oExtentTest,dataMap);
 		
-		Assert.assertTrue(obj2.fCreateTicket1());
-		Assert.assertTrue(obj2.fCreateTicket2());
-		Assert.assertTrue(obj2.fCreateTicket3());
+		RequestNetworkTesting obj2 = new RequestNetworkTesting(oDriver,oExtentReport,oExtentTest,dataMap);
+		
+		AssertJUnit.assertTrue(obj2.fCreateTicket1());
+		AssertJUnit.assertTrue(obj2.fCreateTicket2());
+		AssertJUnit.assertTrue(obj2.fCreateTicket3());
 	}
 }

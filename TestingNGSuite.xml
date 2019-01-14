@@ -28,7 +28,7 @@
 			<parameter name="Action" value="UserAdministrationRoc"></parameter>
 		</classes> 	
 	</test>
-		<test name="UserAdministrationCarrier" enabled="false">
+		<test name="UserAdministrationCarrier" enabled="true">
 		<classes>
 			<class name="com.wsa.tests.UserAdministrationTest"></class>
 			<parameter name="BrowserToOpen" value="chrome"></parameter>
