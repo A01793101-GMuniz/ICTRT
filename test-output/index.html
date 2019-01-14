@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.wsa.tests.UserAdministrationTest" hash-for-method="validation">validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.wsa.tests.UserAdministrationTest" hash-for-method="validation">validation</a> <!-- method navigator-link -->
@@ -131,6 +136,13 @@
                   <span class="method-name">validation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validation">
+                  </a> <!-- validation -->
+                  <span class="method-name">validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -151,6 +163,14 @@
       &lt;class name=&quot;com.wsa.tests.UserAdministrationTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- UserAdministrationRoc --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;UserAdministrationCarrier&quot;&gt;
+    &lt;parameter name=&quot;Action&quot; value=&quot;UserAdministrationCarrier&quot;/&gt;
+    &lt;parameter name=&quot;AppUrl&quot; value=&quot;http://zlt12824.vci.att.com:8500/ictrt/&quot;/&gt;
+    &lt;parameter name=&quot;BrowserToOpen&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.wsa.tests.UserAdministrationTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- UserAdministrationCarrier --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,6 +183,9 @@
             <ul>
               <li>
                 <span class="test-name">UserAdministrationRoc (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">UserAdministrationCarrier (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -350,17 +373,21 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validation')
 <<<<<<< HEAD
 data.setCell(0, 2, 'com.wsa.tests.UserAdministrationTest')
-data.setCell(0, 3, 57643);
+data.setCell(0, 3, 73126);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validation')
+data.setCell(1, 2, 'com.wsa.tests.UserAdministrationTest')
+data.setCell(1, 3, 45966);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 57 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -393,19 +420,53 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">automationSetup(chrome, http://zlt12824.vci.att.com:8500/ictrt/, UserAdministrationRoc)</span>
-                <span class="method-start">241 ms</span>
+                <span class="method-start">242 ms</span>
+<<<<<<< HEAD
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validation</span>
-                <span class="method-start">19261 ms</span>
+                <span class="method-start">19087 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">automationTeardown</span>
-                <span class="method-start">76908 ms</span>
+                <span class="method-start">92215 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class before">
+                <span class="method-name">automationSetup(chrome, http://zlt12824.vci.att.com:8500/ictrt/, UserAdministrationCarrier)</span>
+                <span class="method-start">93185 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">validation</span>
+                <span class="method-start">110467 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">automationTeardown</span>
+=======
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">validation</span>
+                <span class="method-start">19087 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">automationTeardown</span>
+                <span class="method-start">92215 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class before">
+                <span class="method-name">automationSetup(chrome, http://zlt12824.vci.att.com:8500/ictrt/, UserAdministrationCarrier)</span>
+                <span class="method-start">93185 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">validation</span>
+                <span class="method-start">110467 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">automationTeardown</span>
+>>>>>>> 8a9740396c34761f819b22afffc374346823b807
+                <span class="method-start">156435 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">77907 ms</span>
+                <span class="method-start">157468 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
