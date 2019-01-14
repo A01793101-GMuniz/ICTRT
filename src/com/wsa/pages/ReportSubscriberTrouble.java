@@ -64,9 +64,9 @@ public class ReportSubscriberTrouble {
 				}
 			}			
 		    
-			oExtentTest.log(LogStatus.PASS, "Subscriber Trouble: Geneartion Radio buttons are displaying !!");
+			oExtentTest.log(LogStatus.PASS, "ReportSubscriberTroubleTest|fCreateTicket1()|Geneartion Radio buttons are displaying !!");
 		}else{
-			oExtentTest.log(LogStatus.FAIL, "Subscriber Trouble: Geneartion Radio buttons are not displaying!!");
+			oExtentTest.log(LogStatus.FAIL, "ReportSubscriberTroubleTest|fCreateTicket1()|Subscriber Trouble: Geneartion Radio buttons are not displaying!!");
 			return false;
 		}
 		
