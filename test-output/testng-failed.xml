@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="RequestNetworkTesting(failed)">
-    <parameter name="Action" value="RequestNetworkTesting"/>
+  <test thread-count="5" name="UserAdministrationRoc(failed)">
+    <parameter name="Action" value="UserAdministrationRoc"/>
     <parameter name="AppUrl" value="http://zlt12824.vci.att.com:8500/ictrt/"/>
     <parameter name="BrowserToOpen" value="chrome"/>
     <classes>
-      <class name="com.wsa.tests.RequestNetworkTestingTest">
+      <class name="com.wsa.tests.UserAdministrationTest">
         <methods>
           <include name="afterSuite"/>
           <include name="validation"/>
@@ -14,7 +14,7 @@
           <include name="automationTeardown"/>
           <include name="automationSetup"/>
         </methods>
-      </class> <!-- com.wsa.tests.RequestNetworkTestingTest -->
+      </class> <!-- com.wsa.tests.UserAdministrationTest -->
     </classes>
-  </test> <!-- RequestNetworkTesting(failed) -->
+  </test> <!-- UserAdministrationRoc(failed) -->
 </suite> <!-- Failed suite [Suite] -->

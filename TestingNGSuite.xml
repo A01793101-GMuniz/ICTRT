@@ -12,12 +12,28 @@
 			<parameter name="Action" value="LoginCSPTest"></parameter>
 		</classes>
 	</test>
-		<test name="RequestNetworkTesting" enabled="true">
+		<test name="RequestNetworkTesting" enabled="false">
 		<classes>
 			<class name="com.wsa.tests.RequestNetworkTestingTest"></class>
 			<parameter name="BrowserToOpen" value="chrome"></parameter>
 			<parameter name="AppUrl" value="http://zlt12824.vci.att.com:8500/ictrt/"></parameter>
 			<parameter name="Action" value="RequestNetworkTesting"></parameter>
+		</classes> 	
+	</test>
+		<test name="UserAdministrationRoc" enabled="true">
+		<classes>
+			<class name="com.wsa.tests.UserAdministrationTest"></class>
+			<parameter name="BrowserToOpen" value="chrome"></parameter>
+			<parameter name="AppUrl" value="http://zlt12824.vci.att.com:8500/ictrt/"></parameter>
+			<parameter name="Action" value="UserAdministrationRoc"></parameter>
+		</classes> 	
+	</test>
+		<test name="UserAdministrationCarrier" enabled="false">
+		<classes>
+			<class name="com.wsa.tests.UserAdministrationTest"></class>
+			<parameter name="BrowserToOpen" value="chrome"></parameter>
+			<parameter name="AppUrl" value="http://zlt12824.vci.att.com:8500/ictrt/"></parameter>
+			<parameter name="Action" value="UserAdministrationCarrier"></parameter>
 		</classes> 	
 	</test>
 	<test name="ReportSubscriberTroubleTest_MOCall" enabled="false">

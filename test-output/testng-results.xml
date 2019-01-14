@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="100933" started-at="2019-01-11T21:05:39Z" finished-at="2019-01-11T21:07:20Z">
+  <suite name="Suite" duration-ms="77644" started-at="2019-01-14T17:23:45Z" finished-at="2019-01-14T17:25:03Z">
     <groups>
     </groups>
-    <test name="RequestNetworkTesting" duration-ms="100933" started-at="2019-01-11T21:05:39Z" finished-at="2019-01-11T21:07:20Z">
-      <class name="com.wsa.tests.RequestNetworkTestingTest">
-        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:com.wsa.tests.RequestNetworkTestingTest@598067a5]" name="BeforeSuite" is-config="true" duration-ms="233" started-at="2019-01-11T21:05:39Z" finished-at="2019-01-11T21:05:39Z">
+    <test name="UserAdministrationRoc" duration-ms="77644" started-at="2019-01-14T17:23:45Z" finished-at="2019-01-14T17:25:03Z">
+      <class name="com.wsa.tests.UserAdministrationTest">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:com.wsa.tests.UserAdministrationTest@598067a5]" name="BeforeSuite" is-config="true" duration-ms="228" started-at="2019-01-14T17:23:45Z" finished-at="2019-01-14T17:23:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method status="PASS" signature="automationSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wsa.tests.RequestNetworkTestingTest@598067a5]" name="automationSetup" is-config="true" duration-ms="17730" started-at="2019-01-11T21:05:39Z" finished-at="2019-01-11T21:05:57Z">
+        <test-method status="PASS" signature="automationSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wsa.tests.UserAdministrationTest@598067a5]" name="automationSetup" is-config="true" duration-ms="19012" started-at="2019-01-14T17:23:45Z" finished-at="2019-01-14T17:24:04Z">
           <params>
             <param index="0">
               <value>
@@ -25,26 +25,26 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[RequestNetworkTesting]]>
+                <![CDATA[UserAdministrationRoc]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- automationSetup -->
-        <test-method status="PASS" signature="validation()[pri:0, instance:com.wsa.tests.RequestNetworkTestingTest@598067a5]" name="validation" duration-ms="82166" started-at="2019-01-11T21:05:57Z" finished-at="2019-01-11T21:07:19Z">
+        <test-method status="PASS" signature="validation()[pri:0, instance:com.wsa.tests.UserAdministrationTest@598067a5]" name="validation" duration-ms="57643" started-at="2019-01-14T17:24:04Z" finished-at="2019-01-14T17:25:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validation -->
-        <test-method status="PASS" signature="automationTeardown()[pri:0, instance:com.wsa.tests.RequestNetworkTestingTest@598067a5]" name="automationTeardown" is-config="true" duration-ms="1015" started-at="2019-01-11T21:07:19Z" finished-at="2019-01-11T21:07:20Z">
+        <test-method status="PASS" signature="automationTeardown()[pri:0, instance:com.wsa.tests.UserAdministrationTest@598067a5]" name="automationTeardown" is-config="true" duration-ms="963" started-at="2019-01-14T17:25:02Z" finished-at="2019-01-14T17:25:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- automationTeardown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.wsa.tests.RequestNetworkTestingTest@598067a5]" name="afterSuite" is-config="true" duration-ms="404" started-at="2019-01-11T21:07:20Z" finished-at="2019-01-11T21:07:21Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.wsa.tests.UserAdministrationTest@598067a5]" name="afterSuite" is-config="true" duration-ms="352" started-at="2019-01-14T17:25:03Z" finished-at="2019-01-14T17:25:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.wsa.tests.RequestNetworkTestingTest -->
-    </test> <!-- RequestNetworkTesting -->
+      </class> <!-- com.wsa.tests.UserAdministrationTest -->
+    </test> <!-- UserAdministrationRoc -->
   </suite> <!-- Suite -->
 </testng-results>
