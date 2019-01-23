@@ -20,7 +20,7 @@
 			<parameter name="Action" value="RequestNetworkTesting"></parameter>
 		</classes> 	
 	</test>
-		<test name="UserAdministrationRoc" enabled="true">
+		<test name="UserAdministrationRoc" enabled="false">
 		<classes>
 			<class name="com.wsa.tests.UserAdministrationTest"></class>
 			<parameter name="BrowserToOpen" value="chrome"></parameter>
@@ -28,7 +28,7 @@
 			<parameter name="Action" value="UserAdministrationRoc"></parameter>
 		</classes> 	
 	</test>
-		<test name="UserAdministrationCarrier" enabled="true">
+		<test name="UserAdministrationCarrier" enabled="false">
 		<classes>
 			<class name="com.wsa.tests.UserAdministrationTest"></class>
 			<parameter name="BrowserToOpen" value="chrome"></parameter>
@@ -62,4 +62,12 @@
 		</classes>
 	</test>
 	-->
+	<test name="TableMaintenanceTest" enabled="true">
+		<classes>
+			<class name="com.wsa.tests.TableMaintenanceTest"></class>
+			<parameter name="BrowserToOpen" value="firefox"></parameter>
+			<parameter name="AppUrl" value="http://zlt12824.vci.att.com:8500/ictrt/"></parameter>
+			<parameter name="Action" value="TableMaintenance"></parameter>
+		</classes>
+	</test>
 </suite>

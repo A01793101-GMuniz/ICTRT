@@ -1,102 +1,17 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Suite" duration-ms="157218" started-at="2019-01-14T19:18:35Z" finished-at="2019-01-14T19:21:12Z">
-    <groups>
-    </groups>
-    <test name="UserAdministrationRoc" duration-ms="92919" started-at="2019-01-14T19:18:35Z" finished-at="2019-01-14T19:20:08Z">
-      <class name="com.wsa.tests.UserAdministrationTest">
-        <test-method status="PASS" signature="automationSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wsa.tests.UserAdministrationTest@598067a5]" name="automationSetup" is-config="true" duration-ms="18840" started-at="2019-01-14T19:18:35Z" finished-at="2019-01-14T19:18:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://zlt12824.vci.att.com:8500/ictrt/]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[UserAdministrationRoc]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- automationSetup -->
-        <test-method status="PASS" signature="validation()[pri:0, instance:com.wsa.tests.UserAdministrationTest@598067a5]" name="validation" duration-ms="73126" started-at="2019-01-14T19:18:54Z" finished-at="2019-01-14T19:20:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validation -->
-        <test-method status="PASS" signature="automationTeardown()[pri:0, instance:com.wsa.tests.UserAdministrationTest@598067a5]" name="automationTeardown" is-config="true" duration-ms="932" started-at="2019-01-14T19:20:07Z" finished-at="2019-01-14T19:20:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- automationTeardown -->
-      </class> <!-- com.wsa.tests.UserAdministrationTest -->
-    </test> <!-- UserAdministrationRoc -->
-    <test name="UserAdministrationCarrier" duration-ms="64264" started-at="2019-01-14T19:20:08Z" finished-at="2019-01-14T19:21:12Z">
-      <class name="com.wsa.tests.UserAdministrationTest">
-        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:com.wsa.tests.UserAdministrationTest@69ea3742]" name="BeforeSuite" is-config="true" duration-ms="229" started-at="2019-01-14T19:18:35Z" finished-at="2019-01-14T19:18:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeSuite -->
-        <test-method status="PASS" signature="automationSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wsa.tests.UserAdministrationTest@69ea3742]" name="automationSetup" is-config="true" duration-ms="17282" started-at="2019-01-14T19:20:08Z" finished-at="2019-01-14T19:20:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://zlt12824.vci.att.com:8500/ictrt/]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[UserAdministrationCarrier]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- automationSetup -->
-        <test-method status="PASS" signature="validation()[pri:0, instance:com.wsa.tests.UserAdministrationTest@69ea3742]" name="validation" duration-ms="45966" started-at="2019-01-14T19:20:25Z" finished-at="2019-01-14T19:21:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validation -->
-        <test-method status="PASS" signature="automationTeardown()[pri:0, instance:com.wsa.tests.UserAdministrationTest@69ea3742]" name="automationTeardown" is-config="true" duration-ms="1012" started-at="2019-01-14T19:21:11Z" finished-at="2019-01-14T19:21:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- automationTeardown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.wsa.tests.UserAdministrationTest@69ea3742]" name="afterSuite" is-config="true" duration-ms="383" started-at="2019-01-14T19:21:12Z" finished-at="2019-01-14T19:21:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.wsa.tests.UserAdministrationTest -->
-    </test> <!-- UserAdministrationCarrier -->
-  </suite> <!-- Suite -->
-</testng-results>
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="72941" started-at="2019-01-10T22:31:44Z" finished-at="2019-01-10T22:32:57Z">
+  <suite name="Suite" duration-ms="72775" started-at="2019-01-22T23:00:33Z" finished-at="2019-01-22T23:01:46Z">
     <groups>
     </groups>
-    <test name="ReportSubscriberTroubleTest_MOCall" duration-ms="72941" started-at="2019-01-10T22:31:44Z" finished-at="2019-01-10T22:32:57Z">
-      <class name="com.wsa.tests.ReportSubscriberTroubleTest">
-        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:com.wsa.tests.ReportSubscriberTroubleTest@3c0ecd4b]" name="BeforeSuite" is-config="true" duration-ms="123" started-at="2019-01-10T22:31:44Z" finished-at="2019-01-10T22:31:44Z">
+    <test name="TableMaintenanceTest" duration-ms="72775" started-at="2019-01-22T23:00:33Z" finished-at="2019-01-22T23:01:46Z">
+      <class name="com.wsa.tests.TableMaintenanceTest">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:com.wsa.tests.TableMaintenanceTest@14bf9759]" name="BeforeSuite" is-config="true" duration-ms="296" started-at="2019-01-22T23:00:33Z" finished-at="2019-01-22T23:00:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method status="PASS" signature="automationSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wsa.tests.ReportSubscriberTroubleTest@3c0ecd4b]" name="automationSetup" is-config="true" duration-ms="11247" started-at="2019-01-10T22:31:44Z" finished-at="2019-01-10T22:31:56Z">
+        <test-method status="PASS" signature="automationSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wsa.tests.TableMaintenanceTest@14bf9759]" name="automationSetup" is-config="true" duration-ms="17974" started-at="2019-01-22T23:00:33Z" finished-at="2019-01-22T23:00:51Z">
           <params>
             <param index="0">
               <value>
@@ -110,34 +25,26 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[ReportSubscriberTroubleTest_MOCall]]>
+                <![CDATA[TableMaintenance]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- automationSetup -->
-        <test-method status="PASS" signature="validation(java.lang.String)[pri:0, instance:com.wsa.tests.ReportSubscriberTroubleTest@3c0ecd4b]" name="validation" duration-ms="60771" started-at="2019-01-10T22:31:56Z" finished-at="2019-01-10T22:32:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ReportSubscriberTroubleTest_MOCall]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="Validation()[pri:0, instance:com.wsa.tests.TableMaintenanceTest@14bf9759]" name="Validation" duration-ms="53707" started-at="2019-01-22T23:00:51Z" finished-at="2019-01-22T23:01:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validation -->
-        <test-method status="PASS" signature="automationTeardown()[pri:0, instance:com.wsa.tests.ReportSubscriberTroubleTest@3c0ecd4b]" name="automationTeardown" is-config="true" duration-ms="910" started-at="2019-01-10T22:32:56Z" finished-at="2019-01-10T22:32:57Z">
+        </test-method> <!-- Validation -->
+        <test-method status="PASS" signature="automationTeardown()[pri:0, instance:com.wsa.tests.TableMaintenanceTest@14bf9759]" name="automationTeardown" is-config="true" duration-ms="1068" started-at="2019-01-22T23:01:45Z" finished-at="2019-01-22T23:01:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- automationTeardown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.wsa.tests.ReportSubscriberTroubleTest@3c0ecd4b]" name="afterSuite" is-config="true" duration-ms="198" started-at="2019-01-10T22:32:57Z" finished-at="2019-01-10T22:32:58Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.wsa.tests.TableMaintenanceTest@14bf9759]" name="afterSuite" is-config="true" duration-ms="359" started-at="2019-01-22T23:01:46Z" finished-at="2019-01-22T23:01:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.wsa.tests.ReportSubscriberTroubleTest -->
-    </test> <!-- ReportSubscriberTroubleTest_MOCall -->
+      </class> <!-- com.wsa.tests.TableMaintenanceTest -->
+    </test> <!-- TableMaintenanceTest -->
   </suite> <!-- Suite -->
 </testng-results>
->>>>>>> shin

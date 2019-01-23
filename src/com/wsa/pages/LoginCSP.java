@@ -38,8 +38,7 @@ public class LoginCSP {
 	}
 	
 	public boolean fLogin()  throws InterruptedException{
-		oDriver.switchTo().frame(0);
-		
+		oDriver.switchTo().frame(0);		
 		WebDriverWait wait=new WebDriverWait(oDriver, 20);
 		WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(editBox_userid));
 		oExtentTest.log(LogStatus.INFO, "LoginCSP|fLogin()|Starting Login Activity");

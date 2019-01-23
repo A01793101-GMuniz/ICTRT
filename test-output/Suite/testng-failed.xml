@@ -1,43 +1,20 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="UserAdministrationRoc(failed)">
-    <parameter name="Action" value="UserAdministrationRoc"/>
+  <test thread-count="5" name="TableMaintenanceTest(failed)">
+    <parameter name="Action" value="TableMaintenance"/>
     <parameter name="AppUrl" value="http://zlt12824.vci.att.com:8500/ictrt/"/>
-    <parameter name="BrowserToOpen" value="chrome"/>
+    <parameter name="BrowserToOpen" value="firefox"/>
     <classes>
-      <class name="com.wsa.tests.UserAdministrationTest">
+      <class name="com.wsa.tests.TableMaintenanceTest">
         <methods>
           <include name="afterSuite"/>
-          <include name="validation"/>
+          <include name="Validation"/>
           <include name="BeforeSuite"/>
           <include name="automationTeardown"/>
           <include name="automationSetup"/>
         </methods>
-      </class> <!-- com.wsa.tests.UserAdministrationTest -->
+      </class> <!-- com.wsa.tests.TableMaintenanceTest -->
     </classes>
-  </test> <!-- UserAdministrationRoc(failed) -->
+  </test> <!-- TableMaintenanceTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="ReportSubscriberTroubleTest_MOCall(failed)">
-    <parameter name="Action" value="ReportSubscriberTroubleTest_MOCall"/>
-    <parameter name="AppUrl" value="http://zlt12824.vci.att.com:8500/ictrt/"/>
-    <parameter name="BrowserToOpen" value="chrome"/>
-    <classes>
-      <class name="com.wsa.tests.ReportSubscriberTroubleTest">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="BeforeSuite"/>
-          <include name="automationTeardown"/>
-          <include name="validation"/>
-          <include name="automationSetup"/>
-        </methods>
-      </class> <!-- com.wsa.tests.ReportSubscriberTroubleTest -->
-    </classes>
-  </test> <!-- ReportSubscriberTroubleTest_MOCall(failed) -->
-</suite> <!-- Failed suite [Suite] -->
->>>>>>> shin
